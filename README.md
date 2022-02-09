@@ -43,10 +43,9 @@ Game Jam with Matt T
 ## GAME OBJECTS
 - [ ] World
 - [ ] Player 
-  - [ ] movement
-  - [ ] pathfinding
-  - [ ] collisions
-  - [ ] death timer
+  - [*] movement
+  - [*] pathfinding
+  - [*] collisions
   - [ ] animation
   - [ ] sounds
   - [ ] state machine
