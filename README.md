@@ -2,15 +2,24 @@
 Game Jam with Matt T
 
 ## GRAPHIC ASSETS
-- [ ] Hallway map (or tileset?)
-- [ ] Character sprite
-  - [ ] with Equipment A
-  - [ ] with Equipment B
+1. [ ] Hallway map 
+  - [ ] Floor tile
+  - [ ] Wall tile
+    - [ ] Front projection
+    - [ ] Top projection 
+  - [ ] Pit tile
+    - [ ] Front projection
+    - [ ] Top projection 
+2. [ ] Door sprite
+3. [ ] Wall Sconce sprite
+4. [ ] Character sprite
+  - [ ] with Torch (Equipment A)
+  - [ ] with Sword (Equipment B)
   - [ ] animated
-- [ ] Obstruction A (tileset?)
-- [ ] Obstruction B (tileset?)
-- [ ] Equipment A - icon
-- [ ] Equipment B - icon
+5. [ ] Light texture tile
+6. [ ] Shadow tile
+- [ ] Torch (Equipment A) Icon
+- [ ] Sword (Equipment B) Icon
 - [ ] Starting Menu
   - [ ] Start
   - [ ] Quit
