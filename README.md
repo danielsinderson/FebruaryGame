@@ -2,18 +2,22 @@
 Game Jam with Matt T
 
 ## GRAPHIC ASSETS
-- [ ] Hallway map 
+1. [ ] Hallway map 
   - [ ] Floor tile
   - [ ] Wall tile
+    - [ ] Front projection
+    - [ ] Top projection 
   - [ ] Pit tile
-  - [ ] Exit tile (win condition)
-- [ ] Wall Sconce sprite
-- [ ] Light texture tile
-- [ ] Shadow tile
-- [ ] Character sprite
+    - [ ] Front projection
+    - [ ] Top projection 
+2. [ ] Door sprite
+3. [ ] Wall Sconce sprite
+4. [ ] Character sprite
   - [ ] with Torch (Equipment A)
   - [ ] with Sword (Equipment B)
   - [ ] animated
+5. [ ] Light texture tile
+6. [ ] Shadow tile
 - [ ] Torch (Equipment A) Icon
 - [ ] Sword (Equipment B) Icon
 - [ ] Starting Menu
