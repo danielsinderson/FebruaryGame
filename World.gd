@@ -1,12 +1,16 @@
 extends Node2D
 
 
-onready var nav_2d := $YSort/Navigation2D
-onready var player := $YSort/Player
-onready var goal := $YSort/Goal
+onready var player := $Player
+onready var goal := $Goal
+onready var tilemap := $Floor
+onready var pathfinding := $Pathfinding
 
-var path
 
-func _ready():
-	path = nav_2d.get_simple_path(player.global_position, goal.global_position)
-	player.path = path
+
+
+func _physics_process(delta):
+	pathfinding.create_navigation_map(tilemap, false)
+	var new_path = pathfinding.get_new_path(player.position, goal.position)
+	player.path = new_path
+	

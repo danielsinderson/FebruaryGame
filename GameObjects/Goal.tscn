@@ -1,14 +1,15 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Sprites/Goal_test.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/tile-door-exit_3x3_R01_220209.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=5]
 
 [node name="Goal" type="Area2D"]
-position = Vector2( 414, 286 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -10 )
 shape = SubResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -24 )
 texture = ExtResource( 1 )
