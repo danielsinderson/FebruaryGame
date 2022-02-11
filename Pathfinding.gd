@@ -5,6 +5,8 @@ var tilemap : TileMap
 var half_cell_size : Vector2
 var used_rect : Rect2
 
+var excluded_groups := []
+
 
 
 func create_navigation_map(tilemap : TileMap, include_diagonals=true):
@@ -57,17 +59,30 @@ func connect_traversable_tiles(tiles : Array, include_diagonals : bool):
 				
 				# true is for bidirectionality
 				astar.connect_points(id, target_id, true)
-				
-				
 
 
-func update_navigation_map():
+func add_to_excluded_groups(group : String):
+	if not group in excluded_groups:
+		excluded_groups.append(group)
+
+
+func remove_from_excluded_groups(group : String):
+	if group in excluded_groups:
+		excluded_groups.erase(group)
+
+
+func update_navigation_map(groups_to_remove : Array):
 	# re-enable all A* vertices
 	for point in astar.get_points():
 		astar.set_point_disabled(point, false)
 	
+	for group in groups_to_remove:
+		remove_group_from_pathfinding(group)
+
+
+func remove_group_from_pathfinding(group : String):
 	# get all nodes in the scene tree that are in the "obstacles" group
-	var obstacles = get_tree().get_nodes_in_group("obstacles")
+	var obstacles = get_tree().get_nodes_in_group(group)
 	# iterate over them and disable their A* vertices based on node type
 	for obstacle in obstacles:
 		if obstacle is TileMap:
@@ -92,7 +107,7 @@ func get_id_for_point(point : Vector2):
 # get a path from start to end in world coordinates
 # converts world coordinates to map, finds a path, then converts the path back to world
 func get_new_path(start : Vector2, end : Vector2):
-	update_navigation_map()
+	update_navigation_map(excluded_groups)
 	# convert world coordinates to tilemap coordinates
 	var start_tile = tilemap.world_to_map(start)
 	var end_tile = tilemap.world_to_map(end)
