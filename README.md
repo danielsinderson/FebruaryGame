@@ -20,15 +20,19 @@ Game Jam with Matt T
 - [x] Sword (Equipment B) Icon
 - [x] Ligh2D Nodes and occlusion
 - [ ] Tiles for the Pit
-- [ ] Starting Menu
-  - [ ] Start
-  - [ ] Quit
-  - [ ] How to Play
+- [x] Starting Menu
+  - [x] Start
+  - [x] Quit
+  - [x] Changes to Equipment Menu
+- [ ] Equipment Menu (at the start of the level)
+  - [x] Built scene and buttons
+  - [ ] Change to World scene with relevant game state (scraptured)
+- [ ] Rebuild World scene for designed layout
 - [ ] Pause Menu
   - [ ] Continue
   - [ ] Quit
   - [ ] How to play
-- [ ] Equipment Menu (at the start of the level)
+
 
 ## AUDIO ASSETS
 - [ ] Music - Menu
