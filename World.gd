@@ -9,7 +9,7 @@ onready var pathfinding := $Pathfinding
 
 
 
-func _physics_process(delta):
+func _ready():
 	pathfinding.create_navigation_map(tilemap, false)
 	var new_path = pathfinding.get_new_path(player.position, goal.position)
 	player.path = new_path

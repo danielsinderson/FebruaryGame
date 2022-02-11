@@ -7,10 +7,6 @@ var used_rect : Rect2
 
 
 
-func _physics_process(delta):
-	update_navigation_map()
-
-
 func create_navigation_map(tilemap : TileMap, include_diagonals=true):
 	self.tilemap = tilemap
 	
@@ -96,6 +92,7 @@ func get_id_for_point(point : Vector2):
 # get a path from start to end in world coordinates
 # converts world coordinates to map, finds a path, then converts the path back to world
 func get_new_path(start : Vector2, end : Vector2):
+	update_navigation_map()
 	# convert world coordinates to tilemap coordinates
 	var start_tile = tilemap.world_to_map(start)
 	var end_tile = tilemap.world_to_map(end)
