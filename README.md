@@ -15,10 +15,11 @@ Game Jam with Matt T
   - [x] with Torch (Equipment A)
   - [x] with Sword (Equipment B)
   - [x] animated
-- [ ] Light texture tile
-- [ ] Shadow tile
+- [x] Light texture tile
 - [x] Torch (Equipment A) Icon
 - [x] Sword (Equipment B) Icon
+- [x] Ligh2D Nodes and occlusion
+- [ ] Tiles for the Pit
 - [ ] Starting Menu
   - [ ] Start
   - [ ] Quit
