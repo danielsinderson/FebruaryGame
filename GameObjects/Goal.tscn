@@ -11,5 +11,5 @@ position = Vector2( 0, -10 )
 shape = SubResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0, -24 )
+position = Vector2( 0, -27 )
 texture = ExtResource( 1 )

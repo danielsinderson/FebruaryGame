@@ -18,6 +18,13 @@ config/icon="res://Sprites/icon.png"
 
 GameData="*res://GameData.gd"
 
+[display]
+
+window/size/width=512
+window/size/height=300
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
 [physics]
 
 common/enable_pause_aware_picking=true
