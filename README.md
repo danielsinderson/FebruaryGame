@@ -11,14 +11,14 @@ Game Jam with Matt T
     - [x] Front projection
 - [x] Door sprite
 - [x] Wall Sconce sprite
-- [ ] Character sprite
-  - [ ] with Torch (Equipment A)
-  - [ ] with Sword (Equipment B)
-  - [ ] animated
+- [x] Character sprite
+  - [x] with Torch (Equipment A)
+  - [x] with Sword (Equipment B)
+  - [x] animated
 - [ ] Light texture tile
 - [ ] Shadow tile
-- [ ] Torch (Equipment A) Icon
-- [ ] Sword (Equipment B) Icon
+- [x] Torch (Equipment A) Icon
+- [x] Sword (Equipment B) Icon
 - [ ] Starting Menu
   - [ ] Start
   - [ ] Quit
