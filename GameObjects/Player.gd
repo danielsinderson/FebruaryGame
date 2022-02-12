@@ -16,7 +16,10 @@ func move_along_path():
 		if index < length-1:
 			index += 1
 			set_sprite()
+			if $walk.playing == false:
+				$walk.play()
 		else:
+			GameData.equipment_chosen = []
 			get_tree().change_scene_to(load("res://GameObjects/Menu_Win.tscn"))
 
 
@@ -41,6 +44,11 @@ func set_sprite():
 		$PlayerSprite.frame_coords.x = (index % 8) + 8
 
 
+func die():
+	GameData.equipment_chosen = []
+	queue_free()
+	get_tree().change_scene_to(load("res://GameObjects/Menu_Lose.tscn"))
+
+
 func _on_Timer_timeout():
 	move_along_path()
-	print(global_position)

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/froggymusic.wav-ab62d97f30f6328aae569b1b28d2fdec.sample"
+
+[deps]
+
+source_file="res://Audio/froggymusic.wav"
+dest_files=[ "res://.import/froggymusic.wav-ab62d97f30f6328aae569b1b28d2fdec.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

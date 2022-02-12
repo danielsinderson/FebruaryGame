@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/froggydeath.mp3-658158d7d93b7010a7c59d4a1886eb7a.mp3str"
+
+[deps]
+
+source_file="res://Audio/froggydeath.mp3"
+dest_files=[ "res://.import/froggydeath.mp3-658158d7d93b7010a7c59d4a1886eb7a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
