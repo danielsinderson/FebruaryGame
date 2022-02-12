@@ -3,7 +3,7 @@ extends KinematicBody2D
 
 var path := PoolVector2Array() setget set_path
 var index = 1
-var equipment := ["torch"]
+var equipment := GameData.equipment_chosen
 
 
 

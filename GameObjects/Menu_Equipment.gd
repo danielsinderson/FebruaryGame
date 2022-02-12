@@ -18,8 +18,10 @@ func _ready():
 
 
 func _on_button_torch_pressed():
+	GameData.equipment_chosen.append("torch")
 	get_tree().change_scene("res://World.tscn")
 
 
 func _on_button_sword_pressed():
+	GameData.equipment_chosen.append("sword")
 	get_tree().change_scene("res://World.tscn")
