@@ -24,9 +24,9 @@ Game Jam with Matt T
   - [x] Start
   - [x] Quit
   - [x] Changes to Equipment Menu
-- [ ] Equipment Menu (at the start of the level)
+- [x] Equipment Menu (at the start of the level)
   - [x] Built scene and buttons
-  - [ ] Change to World scene with relevant game state (scraptured)
+  - [x] Change to World scene with relevant game state (scraptured)
 - [x] Rebuild World scene for designed layout
 - [ ] Pause Menu
   - [ ] Continue
@@ -35,25 +35,22 @@ Game Jam with Matt T
 
 
 ## AUDIO ASSETS
-- [ ] Music - Menu
-- [ ] Music - Gameplay
-- [ ] FX - Walking
-- [ ] FX - Use Equipment A
-- [ ] FX - Use Equipment B
-- [ ] FX - Reach Goal
-- [ ] FX - Die
+- [x] Music - Menu
+- [x] Music - Gameplay
+- [x] FX - Walking
+- [x] FX - Reach Goal
+- [x] FX - Die
 - [ ] FX - Click Button 
 
 ## GAME OBJECTS
-- [ ] World
-- [ ] Player 
+- [x] World
+- [x] Player 
   - [x] movement
   - [x] pathfinding
   - [x] collisions
-  - [ ] animation
-  - [ ] sounds
-  - [ ] state machine
-- [ ] Obstruction A
+  - [x] animation
+  - [x] sounds
+- [x] Obstruction A
 - [ ] Obstruction B
-- [ ] Tilemap
-- [ ] Goal
+- [x] Tilemap
+- [x] Goal
