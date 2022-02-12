@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://GameObjects/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GameObjects/Pits.tscn" type="PackedScene" id=2]
@@ -114,6 +114,11 @@ points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
 [sub_resource type="OccluderPolygon2D" id=19]
 polygon = PoolVector2Array( 96, 80, 96, 112, 97, 112, 97, 80 )
 
+[sub_resource type="Shader" id=20]
+
+[sub_resource type="ShaderMaterial" id=21]
+shader = SubResource( 20 )
+
 [node name="World" type="Node2D"]
 script = ExtResource( 5 )
 __meta__ = {
@@ -162,11 +167,31 @@ position = Vector2( 56, 48 )
 position = Vector2( 352, 72 )
 
 [node name="Sconce_temporary" parent="." instance=ExtResource( 3 )]
-position = Vector2( 222, 34 )
+position = Vector2( 225, 128 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 occluder = SubResource( 19 )
 
 [node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+position = Vector2( 111, 0 )
+occluder = SubResource( 19 )
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="."]
+position = Vector2( 192, 0 )
+occluder = SubResource( 19 )
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="."]
 position = Vector2( 239, 0 )
 occluder = SubResource( 19 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource( 21 )
+margin_left = 240.0
+margin_top = 144.0
+margin_right = 288.0
+margin_bottom = 160.0
+rect_rotation = 270.0
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
