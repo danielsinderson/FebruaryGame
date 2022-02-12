@@ -28,3 +28,9 @@ current = true
 zoom = Vector2( 0.5, 0.5 )
 editor_draw_limits = true
 editor_draw_drag_margin = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.12
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

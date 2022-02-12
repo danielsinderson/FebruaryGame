@@ -8,8 +8,7 @@ var equipment := ["torch"]
 
 
 func _process(delta):
-	move_along_path()
-	print(global_position)
+	pass
 
 
 func move_along_path():
@@ -27,3 +26,8 @@ func set_path(value : PoolVector2Array):
 	if value.size() == 0:
 		return
 	
+
+
+func _on_Timer_timeout():
+	move_along_path()
+	print(global_position)
