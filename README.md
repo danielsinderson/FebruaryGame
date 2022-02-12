@@ -26,7 +26,7 @@ Game Jam with Matt T
   - [x] Changes to Equipment Menu
 - [ ] Equipment Menu (at the start of the level)
   - [x] Built scene and buttons
-  - [x] Change to World scene with relevant game state (scraptured)
+  - [ ] Change to World scene with relevant game state (scraptured)
 - [x] Rebuild World scene for designed layout
 - [ ] Pause Menu
   - [ ] Continue
