@@ -16,10 +16,8 @@ func move_along_path():
 		if index < length-1:
 			index += 1
 			set_sprite()
-			
-			
-			
-			
+		else:
+			get_tree().change_scene_to(load("res://GameObjects/Menu_Win.tscn"))
 
 
 func set_path(value : PoolVector2Array):
