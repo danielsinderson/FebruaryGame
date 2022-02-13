@@ -28,7 +28,7 @@ func set_path(value : PoolVector2Array):
 
 
 func set_sprite():
-	var facing = path[index] - path[index-1]
+	facing = path[index] - path[index-1]
 	if facing.y > 0:
 		$PlayerSprite.frame_coords.y = 1
 	elif facing.y < 0:

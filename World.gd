@@ -32,3 +32,7 @@ func _physics_process(delta):
 	var player_cell = floor_tiles.world_to_map(player_position)
 	if pathfinding.get_id_for_point(player_cell) in pit_tile_cell_ids:
 		player.die()
+
+
+func _on_AudioStreamPlayer_finished():
+	$AudioStreamPlayer.play()
