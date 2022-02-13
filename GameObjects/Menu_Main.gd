@@ -9,7 +9,9 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$VBoxContainer/button_start.grab_focus()
-
+	
+	# Force maximized windows
+	OS.set_window_maximized(true)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

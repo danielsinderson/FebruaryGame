@@ -7,8 +7,6 @@ var equipment := GameData.equipment_chosen
 
 var facing := Vector2(0, 1)
 
-
-
 func move_along_path():
 	var length = path.size()
 	if length > 1:
@@ -52,3 +50,8 @@ func die():
 
 func _on_Timer_timeout():
 	move_along_path()
+
+
+func _on_Light2D_ready():
+	if "sword" in equipment:
+		$Light2D.visible = false
