@@ -9,8 +9,7 @@ Follow these steps to test play the game in a browser/host the game on a local s
 	```
 2. Edit the variables in "FebruaryGameJam-server_run.sh"
 	- Change PROJECT_PATH to the absolute path of the HTML5 folder
-	- change LOCAL_ADDRESS to the host machine's local address (usually 192.168.1.x)
-		- HINT: use the IP4 address listed with the "ip address" command in Terminal.
+	- change LOCAL_ADDRESS to the host machine's local address (default is 172.0.0.1)
 	- Change PORT to whatever value is best
 		- "7007" is the current default. Use whatever port you'd like, but try to avoid port conflicts with other web apps on your server/machine
 
@@ -19,7 +18,7 @@ Follow these steps to test play the game in a browser/host the game on a local s
 	- sh FebruaryGameJam-server_run.sh
 	```
 4. From a computer that is connected to the local network, open a web browser and navigate to the server address
-	- 192.1.8.7007 (local.ip.address.portnumber)
+	- 127.0.0.1:7007 (local.ip.address.portnumber)
 
 
 ## TO DO LIST
