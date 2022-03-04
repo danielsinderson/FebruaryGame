@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Sprites/sprite-sheet.png" type="Texture" id=1]
+[ext_resource path="res://GameObjects/Menu_Equipment.gd" type="Script" id=2]
+[ext_resource path="res://Audio/froggymusic.wav" type="AudioStream" id=3]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 32, 240, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 32, 272, 16, 16 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 514.0
+margin_bottom = 302.0
+color = Color( 0.0117647, 0.0117647, 0.0784314, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button_torch" type="Button" parent="."]
+margin_left = 120.0
+margin_top = 120.0
+margin_right = 200.0
+margin_bottom = 200.0
+icon = SubResource( 1 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button_sword" type="Button" parent="."]
+margin_left = 312.0
+margin_top = 120.0
+margin_right = 392.0
+margin_bottom = 200.0
+icon = SubResource( 2 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+
+[connection signal="pressed" from="button_torch" to="." method="_on_button_torch_pressed"]
+[connection signal="pressed" from="button_sword" to="." method="_on_button_sword_pressed"]

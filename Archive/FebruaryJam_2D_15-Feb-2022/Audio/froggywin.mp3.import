@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/froggywin.mp3-2088660de6d85b787940458aaee9fa43.mp3str"
+
+[deps]
+
+source_file="res://Audio/froggywin.mp3"
+dest_files=[ "res://.import/froggywin.mp3-2088660de6d85b787940458aaee9fa43.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
