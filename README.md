@@ -27,3 +27,11 @@ Follow these steps to test play the game in a browser/host the game on a local s
 	```
 4. From a computer that is connected to the local network, open a web browser and navigate to the server address
 	- 127.0.0.1:7007 (local.ip.address.portnumber)
+
+## To Do List
+### Matt
+- [ ] Experiment with IK rigging equipment scenes to the Player, to avoid needing individual sprite sheets for every equipment combination. 
+- [ ] Create a hostile object (for Sword scenario).
+- [ ] Add flickering effect to torch and sconce lighting.
+- [ ] Animate sconce and torch.
+- [ ] Experiment with fog effects
