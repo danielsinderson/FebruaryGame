@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://GameObjects/Floor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GameObjects/Walls.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GameObjects/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://GameObjects/Sconce.tscn" type="PackedScene" id=4]
 [ext_resource path="res://GameObjects/Goal.tscn" type="PackedScene" id=5]
+[ext_resource path="res://GameObjects/Sconce_Backlight.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ProceduralSky" id=1]
 sky_top_color = Color( 0.0470588, 0, 0.0156863, 1 )
@@ -34,9 +35,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1 )
 [node name="Sconce" parent="WorldEnvironment" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, 0.5 )
 
-[node name="Sconce3" parent="WorldEnvironment" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, 4.5 )
-visible = false
-
 [node name="Sconce2" parent="WorldEnvironment" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 3, 1.5 )
+
+[node name="Backlight_Sconce" parent="WorldEnvironment" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, 5 )
+
+[node name="Backlight_Sconce2" parent="WorldEnvironment" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 3, 3 )

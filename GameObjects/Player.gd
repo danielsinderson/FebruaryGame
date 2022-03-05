@@ -8,20 +8,31 @@ export var speed = 7
 export var fall_acceleration = 75
 var velocity = Vector3.ZERO
 
-onready var animation = $Mesh/PixelMesh/AnimationPlayer
+onready var animation = $Froggy/AnimationPlayer
 
 func _physics_process(delta):
 	var direction = Vector3.ZERO
+	
+	# Spatial containing all PixelMeshes
+	var player_mesh = $Froggy
+	
+	# Enable torch visibility 
+	if torch:
+		$Froggy/mesh_torch.visible = true
+	
+	# Collision shape will rotate to keep track of which 
+	# direction the player is facing. Value is checked
+	# when 'idle'. See 'moving_idle'
 	var collision_shape = get_node("CollisionShape")
 	
+	# Input variables for player movement
 	var moving_right = Input.is_action_pressed("ui_right")
 	var moving_left = Input.is_action_pressed("ui_left")
 	var moving_up = Input.is_action_pressed("ui_up")
 	var moving_down = Input.is_action_pressed("ui_down")
-	var moving_idle = true
 	
-	var player_mesh = $Mesh
-	#var pixel_mesh = player_mesh.get_node("PixelMesh")
+	# Boolean for whether player is idle/moving (true:idle, false:moving)
+	var moving_idle = true # Is idle
 	
 	if moving_right:
 		direction.x += 1
@@ -32,15 +43,12 @@ func _physics_process(delta):
 		# Set the sprite orientation
 		if player_mesh.scale.x < 0:
 			player_mesh.scale.x = abs(player_mesh.scale.x) # Sets the "sprite" direction
-			#player_mesh.scale.z = abs(player_mesh.scale.z)
-			#collision_shape.scale.z = abs(collision_shape.scale.z)
+			player_mesh.scale.z = abs(player_mesh.scale.z)
 		
 		# Change the animation
-		if torch:
-			animation.play("walking_side_torch")
-		else:
-			animation.play("walking_side")
+		animation.play("walking_side")
 		
+		# Is not idle
 		moving_idle = false
 		
 	if moving_left:
@@ -52,14 +60,10 @@ func _physics_process(delta):
 		# Set the sprite orientation
 		if player_mesh.scale.x > 0: # if positive
 			player_mesh.scale.x = -player_mesh.scale.x # set the "sprite" direction
-			#player_mesh.scale.z = -player_mesh.scale.z
-			#collision_shape.scale.z = -collision_shape.scale.z
+			player_mesh.scale.z = -player_mesh.scale.z
 			
 		# Change the animation
-		if torch:
-			animation.play("walking_side_torch")
-		else:
-			animation.play("walking_side")
+		animation.play("walking_side")
 		
 		moving_idle = false
 	
@@ -70,14 +74,12 @@ func _physics_process(delta):
 		collision_shape.rotation_degrees.y = 0
 		
 		# Set the sprite orientation
-		player_mesh.scale.x = abs(player_mesh.scale.x)
-		#collision_shape.scale.z = abs(collision_shape.scale.z)
+		if player_mesh.scale.x < 0:
+			player_mesh.scale.x = abs(player_mesh.scale.x) # Sets the "sprite" direction
+			player_mesh.scale.z = abs(player_mesh.scale.z)
 		
 		# Change the animation
-		if torch:
-			animation.play("walking_down_torch")
-		else:
-			animation.play("walking_down")
+		animation.play("walking_down")
 			
 		moving_idle = false
 	
@@ -88,37 +90,27 @@ func _physics_process(delta):
 		collision_shape.rotation_degrees.y = 180
 		
 		# Set the sprite orientation
-		player_mesh.scale.x = abs(player_mesh.scale.x)
-		#collision_shape.scale.z = -collision_shape.scale.z
+		if player_mesh.scale.x < 0: 
+			player_mesh.scale.x = abs(player_mesh.scale.x) # set the "sprite" direction
+			player_mesh.scale.z = abs(player_mesh.scale.z)
+		#player_mesh.scale.x = -(abs(player_mesh.scale.x))
 		
 		# Change the animation
-		if torch:
-			animation.play("walking_up_torch")
-		else:
-			animation.play("walking_up")
+		animation.play("walking_up")
 		
 		moving_idle = false
 		
 	if moving_idle: # If not moving
 		# If player was moving right/left
 		if abs(collision_shape.rotation_degrees.y) == 90:
-			if torch:
-				animation.play("idle_side_torch")
-			else:
-				animation.play("idle_side")
+			animation.play("idle_side")
 			
 		# If player was moving down
 		if collision_shape.rotation_degrees.y == 0:
-			if torch:
-				animation.play("idle_front_torch")
-			else:
-				animation.play("idle_front")
+			animation.play("idle_front")
 		
 		# If player was moving up
 		if collision_shape.rotation_degrees.y == 180:
-			if torch:
-				animation.play("idle_back_torch")
-			else:
 				animation.play("idle_back")
 
 	velocity.x = direction.x * speed
